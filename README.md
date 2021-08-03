@@ -13,4 +13,5 @@ If code exists and has not expired the command that you chose when you generated
 # Versions
 Version | Information | Date | Api
 ------- | ----------- | ---- | ---
+v1.0.5 | Added ui for redeem, Added {player} tag to use instead of player's name who is using the code | 3 Aug 2021 | 3.0.0 -> 3.22.1
 v1.0.0 | First stable version | 3 Aug 2021 | 3.0.0 -> 3.22.1
