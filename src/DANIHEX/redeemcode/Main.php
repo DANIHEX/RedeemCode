@@ -55,7 +55,7 @@ class Main extends PluginBase implements Listener {
                             $code = $args[0];
                             $this->redeem($sender, $code);
                         } else {
-                            $sender->sendMessage(TF::YELLOW . "Usage: /redeem <text:code>");
+                            $this->openRedeemForm($sender);
                         }
                     } else {
                         $sender->sendMessage(TF::RED . "You don't have permission to use this command");
@@ -106,7 +106,8 @@ class Main extends PluginBase implements Listener {
                 if(!isset($json["uses"][$player->getName()])){
                     $json["uses"][$player->getName()] = true;
                     file_put_contents($this->df . "codes/" . $code . ".json", json_encode($json));
-                    $this->getServer()->dispatchCommand(new ConsoleCommandSender(), $json["command"]);
+                    $command = str_replace(["{player}"], [$player->getName()], $json["command"]);
+                    $this->getServer()->dispatchCommand(new ConsoleCommandSender(), $command);
                     $player->sendMessage(TF::YELLOW . "Redeem code successfuly used!");
                 } else {
                     $player->sendMessage(TF::RED . "You have used this code before.");
@@ -116,7 +117,8 @@ class Main extends PluginBase implements Listener {
                     $json["times"] = $json["times"] - 1;
                     $json["uses"][$player->getName()] = true;
                     file_put_contents($this->df . "codes/" . $code . ".json", json_encode($json));
-                    $this->getServer()->dispatchCommand(new ConsoleCommandSender(), $json["command"]);
+                    $command = str_replace(["{player}"], [$player->getName()], $json["command"]);
+                    $this->getServer()->dispatchCommand(new ConsoleCommandSender(), $command);
                     $player->sendMessage(TF::YELLOW . "Redeem code successfuly used!");
                 } else {
                     $player->sendMessage(TF::RED . "You have used this code before.");
@@ -160,6 +162,26 @@ class Main extends PluginBase implements Listener {
         $form->addLabel($l);
         $form->addInput("Command", "The command?");
         $form->addInput("Times", "How many times?");
+        $form->sendToPlayer($player);
+        return $form;
+    }
+
+    public function openRedeemForm(Player $player, string $label){
+        $form = new CustomForm(function (Player $player, array $data = null){
+            if($data === null) return true;
+            if(!empty($data[1])){
+                $this->redeem($player, $data[1]); 
+            } else {
+                $this->openRedeemForm($player, TF::RED . "Inputs can not be empty!");   
+            }
+        });
+        $l = $label;
+        if($l === ""){
+            $l = "Inter a redeem code and get it's reward";
+        }
+        $form->setTitle("Use Redeem Code");
+        $form->addLabel($l);
+        $form->addInput("Redeem Code", "Type the code here");
         $form->sendToPlayer($player);
         return $form;
     }
