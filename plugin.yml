@@ -1,0 +1,28 @@
+---
+name: RedeemCode
+description: Generate redeem codes and use them to run a command as a gift
+version: 1.0.0
+main: DANIHEX\redeemcode\Main
+api: [3.0.0]
+author: DANIHEX
+
+commands:
+    generatecode:
+        description: "Generate a new redeem code"
+        usage: "/generatecode <text:code>"
+        permission: "redeemcode.command.generatecode"
+    redeem:
+        description: "Use a redeem code"
+        usage: "/redeem <text:code>"
+        permission: "redeemcode.command.redeem"
+
+permissions:
+    redeemcode.command.generatecode:
+        default: op
+    redeemcode.command.redeem:
+        default: true
+...
+
+
+
+
