@@ -1,7 +1,7 @@
 ---
 name: RedeemCode
 description: Generate redeem codes and use them to run a command as a gift
-version: 1.0.0
+version: 1.0.5
 main: DANIHEX\redeemcode\Main
 api: [3.0.0]
 author: DANIHEX
