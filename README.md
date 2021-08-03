@@ -1,7 +1,5 @@
 # RedeemCode
 Gemerate redeem codes and run commands when someone uses them.
-# RedeemCode
-Generate redeem codes and run commands when someone uses them as a gift
 
 # Usage
 To generate a new redeem code use command `/generatecode <code: text>` and just type your favorite code in **code** argument.
