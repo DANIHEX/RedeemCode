@@ -166,7 +166,7 @@ class Main extends PluginBase implements Listener {
         return $form;
     }
 
-    public function openRedeemForm(Player $player, string $label){
+    public function openRedeemForm(Player $player, string $label = ""){
         $form = new CustomForm(function (Player $player, array $data = null){
             if($data === null) return true;
             if(!empty($data[1])){
