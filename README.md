@@ -10,8 +10,11 @@ Now submit the form, If you didn't do something wrong the code will successfuly 
 To use a redeem code players should use command `/redeem <code: text>` and type the code in **code** argument.
 If code exists and has not expired the command that you chose when you generated the code will execute.
 
+To change messages and texts to your favorites, just edit the strings.yml file in here: /plugin_data/RedeemCode/strings.yml
+
 # Versions
 Version | Information | Date | Api
 ------- | ----------- | ---- | ---
+v1.1.0 | Added strings.yml resource to change messages and text | 5 Aug 2021 | 3.0.0 -> 3.22.1
 v1.0.5 | Added ui for redeem, Added {player} tag to use instead of player's name who is using the code in command | 3 Aug 2021 | 3.0.0 -> 3.22.1
 v1.0.0 | First stable version | 3 Aug 2021 | 3.0.0 -> 3.22.1
