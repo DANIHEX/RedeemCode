@@ -1,0 +1,25 @@
+---
+code-generate-success: "Code successfuly generated!"
+code-updated-success: "Code successfuly updated!"
+code-use-success: "Dedeem code successfuly used!"
+code-use-error-before: "You have used this code before."
+code-use-error-expire: "Sorry, The redeem code has expired!"
+code-use-error-exist: "Oops! The redeem code does not exist!"
+form-error-times: "You can only type -1 to make the code infinite or 1 and bigger numbers in the second input."
+form-error-type: "First input should be a command and second one should be a number."
+form-error-empty: "Inputs can not be empty!"
+form-content-redeem: "Inter a redeem code and get it's reward"
+form-title-redeem: "Use Redeem Code"
+form-code-title: "Redeem Code"
+form-code-help: "Type the code here"
+form-content: "Put the command you want to execute when someone uses this redeem code whitout '/' in the first input.\nType -1 in the second input to make this code infinite  or type how many times you wanna use this code:\n"
+form-title: "Generate Redeem Code"
+form-times-title: "Command"
+form-times-help: "The command?"
+form-command-title: "Times"
+form-command-help: "How many times?"
+error-unknown: "Something went wrong! Please use '/generatecode' command again."
+...
+
+
+
