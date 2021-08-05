@@ -20,6 +20,3 @@ form-command-title: "Times"
 form-command-help: "How many times?"
 error-unknown: "Something went wrong! Please use '/generatecode' command again."
 ...
-
-
-
