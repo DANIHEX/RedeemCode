@@ -27,7 +27,7 @@ class Main extends PluginBase implements Listener {
 
     public function onEnable(){
         $this->saveResource("strings.yml");
-        $this->strings = new Config($this->df . "strings.yml", Confg::YAML);
+        $this->strings = new Config($this->df . "strings.yml", Config::YAML);
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
