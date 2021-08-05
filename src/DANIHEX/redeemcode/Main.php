@@ -10,6 +10,7 @@ use pocketmine\event\Listener;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\command\ConsoleCommandSender;
+use pocketmine\utils\Config;
 use pocketmine\utils\TextFormat as TF;
 use DANIHEX\redeemcode\libs\jojoe77777\FormAPI\CustomForm;
 
@@ -187,11 +188,3 @@ class Main extends PluginBase implements Listener {
     }
 
 }
-
-
-
-
-
-
-
-
